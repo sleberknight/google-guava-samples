@@ -18,7 +18,9 @@ public class ClassPathTest {
     @Test
     public void testFindClassesInGuavaBasePackage() throws IOException {
         ClassPath classPath = ClassPath.from(Thread.currentThread().getContextClassLoader());
-        ImmutableSet<ClassPath.ClassInfo> classes = classPath.getTopLevelClasses("com.google.common.base");
+
+        String guavaBasePackageName = Function.class.getPackage().getName();
+        ImmutableSet<ClassPath.ClassInfo> classes = classPath.getTopLevelClasses(guavaBasePackageName);
 
         Collection<Object> classNames = Collections2.transform(classes, new Function<ClassPath.ClassInfo, Object>() {
             @Nullable
