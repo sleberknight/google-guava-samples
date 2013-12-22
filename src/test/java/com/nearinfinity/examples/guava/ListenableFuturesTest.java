@@ -56,6 +56,7 @@ public class ListenableFuturesTest {
         final List<Worker> successfulWorkers = Collections.synchronizedList(new ArrayList<Worker>());
         final List<Worker> failedWorkers = Collections.synchronizedList(new ArrayList<Worker>());
 
+        // TODO Find out what following commented code is, and remove or implement it.
         /*
         List<Future<WorkResult>> futures = _executorService.invokeAll(workers);
         for (Future<WorkResult> future : futures) {

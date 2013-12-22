@@ -10,16 +10,16 @@ public class HashingExample {
 
         HashCode hash1 = hashFunction.newHasher()
                 .putInt(42)
-                .putString("Rod")
-                .putString("Johnson")
+                .putUnencodedChars("Rod")
+                .putUnencodedChars("Johnson")
                 .hash();
         System.out.printf("hash1 bits : %d\n", hash1.bits());
         System.out.printf("hash1 value: %s\n", hash1.toString());
 
         HashCode hash2 = hashFunction.newHasher()
                 .putInt(42)
-                .putString("Rob")  // one letter difference...
-                .putString("Johnson")
+                .putUnencodedChars("Rob")  // one letter difference...
+                .putUnencodedChars("Johnson")
                 .hash();
         System.out.printf("hash2 bits: %d\n", hash2.bits());
         System.out.printf("hash2 value: %s\n", hash2.toString());

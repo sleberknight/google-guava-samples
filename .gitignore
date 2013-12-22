@@ -1,5 +1,4 @@
 target
 .idea
 .DS_Store
-zookeeper-samples.i*
-
+guava-samples.i*
