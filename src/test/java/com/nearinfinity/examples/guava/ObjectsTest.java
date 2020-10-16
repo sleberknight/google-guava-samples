@@ -1,5 +1,6 @@
 package com.nearinfinity.examples.guava;
 
+import com.google.common.base.MoreObjects;
 import com.google.common.base.Objects;
 import com.google.common.collect.ComparisonChain;
 import com.google.common.collect.ImmutableList;
@@ -37,7 +38,7 @@ public class ObjectsTest {
 
     @Test
     public void testToStringHelper() {
-        String result = Objects.toStringHelper("SomeClass")
+        String result = MoreObjects.toStringHelper("SomeClass")
                 .omitNullValues()
                 .add("firstName", "Brian")
                 .add("lastName", "Smith")
@@ -70,7 +71,7 @@ public class ObjectsTest {
 
         @Override
         public String toString() {
-            return Objects.toStringHelper(getClass())
+            return MoreObjects.toStringHelper(getClass())
                     .add("firstName", _firstName)
                     .add("lastName", _lastName)
                     .add("age", _age)
