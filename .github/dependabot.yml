@@ -3,7 +3,7 @@ updates:
   - package-ecosystem: "maven"
     directory: "/" # Location of package manifests
     schedule:
-      interval: "daily"
+      interval: "weekly"
     assignees:
       - "sleberknight"
     reviewers:
